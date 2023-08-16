@@ -90,10 +90,28 @@ function renderGeneros(generos) {
 }
 
 async function filterByGenre(id) {
-
   const filterfilmes = await getFilmes(1, id);
   renderFilmes(filterfilmes);
 }
+
+async function searchMovie(name){
+  const data = await getDados(`https://api.themoviedb.org/3/search/movie?language=pt-BR&query=${name}`);
+  return data.results;
+}
+
+const formSearch = document.querySelector('#form-search');
+formSearch.addEventListener('submit', async (event) => {
+  event.preventDefault();
+  const inputSearch = document.querySelector('#input-search');
+  const name = inputSearch.value;
+  if (name === '') {
+    return
+  }
+  loadingSpinner()
+  const filmes = await searchMovie(name);
+  renderFilmes(filmes);
+  loadingSpinner()
+});
 
 const selectInput = document.querySelector('#select-generos');
 selectInput.addEventListener('change', async (event) => {
