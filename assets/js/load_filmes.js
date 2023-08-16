@@ -45,12 +45,10 @@ btnAnterior.addEventListener('click', async () => {
   await paginacao.anterior();
 });
 
-
 function loadingSpinner() {
   const screenLoad = document.querySelector('.screen-load');
   screenLoad.classList.toggle('active-load');
 }
-
 
 async function getFilmes(page = 1, genero = '') {
   loadingSpinner()
@@ -107,7 +105,6 @@ selectInput.addEventListener('change', async (event) => {
 
 });
 
-
 async function main() {
   let page = 1;
 
@@ -117,6 +114,4 @@ async function main() {
       renderGeneros(generos);
     });
 }
-
-
 main();

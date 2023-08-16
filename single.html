@@ -37,11 +37,8 @@
 					<button type="button" class="menu-toggle"><i class="fa fa-bars"></i></button>
 					<ul class="menu">
 						<li class="menu-item"><a href="index.html">Home</a></li>
-						<li class="menu-item"><a href="about.html">About</a></li>
 						<li class="menu-item current-menu-item"><a href="index.html">Movie reviews</a></li>
-						<li class="menu-item"><a href="joinus.html">Join us</a></li>
-						<li class="menu-item"><a href="contact.html">Contact</a></li>
-					</ul> <!-- .menu -->
+					</ul>  <!-- .menu -->
 
 					<form action="#" class="search-form">
 						<input type="text" placeholder="Search...">
@@ -69,6 +66,7 @@
 							</div>
 							<div class="col-md-6">
 								<h2 class="movie-title" id="titulo"></h2>
+								<h3 class="" id="tagline"></h3>
 								<div class="movie-summary">
 									<p id="descricao"></p>
 								</div>
@@ -78,16 +76,14 @@
 												style="width:100%"><strong class="rating">6.00</strong> out of 5</span>
 										</div>
 									</li>
-									<li><strong>Length:</strong> 98 min</li>
-									<li><strong>Premiere:</strong> 22 March 2013 (USA)</li>
+									<li><strong>Duração:</strong> <span id="runtime"></span> min</li>
+									<li><strong>Data de lançamento:</strong><span id="release_date"></span></li>
 									<li><strong>Category:</strong> <span id="genres"></span></li>
 								</ul>
 
 								<ul class="starring">
-									<li><strong>Directors:</strong> Kirk de Mico (as Kirk DeMico). Chris Sanders</li>
-									<li><strong>Writers:</strong> Chris Sanders (screenplay), Kirk De Micco (screenplay)
+									<li><strong>Empresas de produção:</strong><span id="production_companies"></span></li>
 									</li>
-									<li><strong>Stars:</strong> Nicolas Cage, Ryan Reynolds, Emma Stone</li>
 								</ul>
 							</div>
 						</div> <!-- .row -->

@@ -32,9 +32,13 @@ function detalhesFilme() {
       document.getElementById('descricao').innerHTML = response.overview;
       document.getElementById('imagem').src = `https://image.tmdb.org/t/p/w500/${response.poster_path}`;
       document.getElementById('genres').innerText = '' + response.genres.map(genre => genre.name).join('/');
-      // document.getElementById('vote_average').innerText = response.vote_average;
       document.getElementById('name-movie').innerText = response.title;
-      // console.log(document.getElementById('name-movie'))
+      document.getElementById('tagline').innerText = response.tagline;
+      document.getElementById('runtime').innerText = response.runtime;
+      document.getElementById('production_companies').innerText = '' + response.production_companies.map(company => `${company.name} (${company.origin_country})`).join('/ ');
+      document.getElementById('release_date').innerText = response.release_date.replace(/-/g, '/');
+
+
     })
     .catch(err => console.error(err));
     loadingSpinner()
